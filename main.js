@@ -6,10 +6,15 @@ class MyComponent extends Component {
         <span>hi</span>
         <span>di</span>
         <span>lao</span>
+        {this.children}
       </div>
     )
   }
 }
 
-let a = <MyComponent name="a" id="test"></MyComponent>
+let a = (
+  <MyComponent name="a" id="test">
+    <div>123</div>
+  </MyComponent>
+)
 ToyReact.render(a, document.body)
