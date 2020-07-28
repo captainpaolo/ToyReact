@@ -43,7 +43,7 @@ export class Component {
 
 export let ToyReact = {
   createElement(type, attributes, ...children) {
-    console.log(arguments)
+    console.log('createElement', arguments)
     let element
     if (typeof type === 'string') {
       element = new ElementWrapper(type)
@@ -80,6 +80,7 @@ export let ToyReact = {
     return element
   },
   render(vdom, element) {
+    console.log('render----------', vdom, element)
     vdom.mountTo(element)
   }
 }
