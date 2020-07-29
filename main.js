@@ -16,7 +16,7 @@ class Square extends Component {
           })
         }}
       >
-        {this.props.value}
+        {this.state.value || ''}
       </button>
     )
   }
